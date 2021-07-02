@@ -1,0 +1,26 @@
+<div xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head(title)">
+        <link rel="icon" th:href="@{/images/bierhuis.ico}" type="image/x-icon">
+        <title th:text="${title}"></title>
+        <link rel="stylesheet" th:href="@{/css/bierhuis.css}">
+    </head>
+    <nav th:fragment="menu">
+        <ul>
+            <li><a th:href="@{/}">Welkom</a></li>
+            <li><a th:href="@{/brouwers}">Brouwers</a></li>
+            <li th:if="not${mandje.getIdsCount().isEmpty()}" ><a th:href="@{/mandje}">Mandje</a></li>
+
+
+        </ul>
+    </nav>
+
+    <table th:fragment="brouwerTabel(brouwers)" xmlns:th="http://www.thymeleaf.org">
+
+        <tbody>
+        <tr th:each="brouwer:${brouwers}" th:object="${brouwer}">
+            <td><a th:text="|*{naam}(*{adres.gemeente.gemeente})|" th:href="@{/brouwers/{brouwerid}(brouwerid=*{brouwerId})}"></a> </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>

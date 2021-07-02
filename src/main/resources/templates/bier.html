@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="nl" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments::head(title=${bier} ? *{bier.getNaam()} : 'Bier niet gevonden')"><title></title></head>
+
+<body>
+<script th:src="@{/js/preventDoubleSubmit.js}" defer></script>
+
+<nav th:replace="fragments::menu"></nav>
+<th:block th:if="${bier}" th:object="${bier}">
+    <h1 th:text="*{naam}"></h1>
+    <dl>
+        <dt>Nummer</dt>
+        <dd th:text="*{id}"></dd>
+        <dt>Prijs</dt>
+        <dd th:text="*{{prijs}}"></dd>
+
+    </dl>
+    <form method="post" th:action="@{/mandje/{id}(id=*{id})}"  >
+        <input  name="aantal" type= "number" min="1" autofocus required>
+        <button>In mandje</button>
+    </form>
+
+</th:block>
+
+</body>
+</html>

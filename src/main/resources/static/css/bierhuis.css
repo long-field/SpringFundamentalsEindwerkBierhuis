@@ -1,0 +1,149 @@
+body {
+    background-color: #FFFFDE;
+    font-family: sans-serif;
+}
+
+
+
+
+
+
+dd, dt {
+    margin-left: 0;
+}
+
+dt {
+    margin-top: 0.5em;
+}
+
+dd {
+    font-weight: bold;
+}
+
+label span, .fout {
+    background-color: red;
+    border-bottom-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    box-shadow: 5px 5px #777777;
+    color: white;
+    margin-left: 0.5em;
+    padding: 0.5em;
+}
+
+.boodschap {
+    background-color: green;
+    border-bottom-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    box-shadow: 5px 5px #777777;
+    color: white;
+    margin-left: 0.5em;
+    padding: 0.5em;
+}
+
+label span {
+    margin-left: 0.5em;
+}
+
+label {
+    cursor: pointer;
+}
+
+input, button {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    margin-top: 0.2em;
+}
+
+input:focus, textarea:focus, select:focus {
+    background-color: #FFFFD6
+}
+
+input[type='checkbox'] {
+    display: inline;
+}
+
+nav ul {
+    background-color: #FAFFA9;
+    padding: 0.4em 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    color: Black;
+    font-weight: bold;
+    padding-left: 0.5em;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+nav li a:hover {
+    color: #F8C471;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    outline: 0;
+    padding: 8px 16px;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+button:active {
+    background-color: #3ecc41;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+table,
+td,
+th {
+    border: 1px solid silver;
+    border-collapse: collapse;
+    padding: 5px 5px;
+}
+
+th {
+    color: Black;
+    background-color: #FAFFA9;
+}
+
+td {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+
+td a {
+    color: black;
+    text-decoration: none;
+}
+
+td a:hover {
+    color: #F7FFCC;
+}
+
+tr:nth-child(even) {
+    background-color: #FAFABA;
+}
+
+tr:nth-child(odd) {
+    background-color: #FAFAFA;
+}
+
+tr:hover {
+    background-color: gold;
+}

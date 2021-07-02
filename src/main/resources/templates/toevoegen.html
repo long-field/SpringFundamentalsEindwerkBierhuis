@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="nl" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments::head(title='Het bierhuis')"></head>
+<body>
+<nav th:replace="fragments::menu"></nav>
+<h1 th:if="${param.bestelbonId}" >Je winkelwagentje is bevestigd als bestelbon: <th:block th:text="${param.bestelbonId}"></th:block>.</h1>
+
+</body>
+</html>
